@@ -110,6 +110,7 @@ p {
 
 .sec-sub-topic{
     position: absolute;
+    bottom: -169px;
     left: 30%;
     color: #fff;
     font-size: 2rem;
@@ -122,6 +123,7 @@ hr{
 .thi-sub-topic{
     color: #fff;
     position: absolute;
+    top: 741px;
     left: 40%;
     bottom: -160px;
 }
