@@ -1,12 +1,32 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bolden</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" href="img/logo.png">
+    <style>
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links, a:hover {
+            color: #ffcc00; 
+            transform: scale(1.2);
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -15,28 +35,104 @@
                 <span>Bolden</span>
             </div>
             <div class="links">
-                <div class="link"><a href="#home">Home</a></div>
-                <div class="link"><a href="#volunteers">Volunteers</a></div>
-                <div class="link"><a href="#about">About</a></div>
-                <div class="link"><a href="#team">Team</a></div>
-                <div class="link"><a href="#contact">Contact Us</a></div>
+                <a href="#home">Home</a>
+                <a href="#volunteers">Volunteers</a>
+                <a href="#about">About</a>
+                <a href="#team">Team</a>
+                <a href="#activities">Activites</a>
+                <a href="#contact">Contact Us</a>
             </div>
-            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+            <div class="social-links">
+                <a href="" style="color: #fff;" class="soical"><i class="fa-brands fa-instagram"></i></a>
+                <a href="" style="color: #fff;" class="soical"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="" style="color: #fff;" class="soical"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+
+            <i class="fa-solid fa-bars hamburg" onclick="toggleMenu()" style="display: none;"></i>
         </div>
     </nav>
-    <section>
-        <div class="container" id="home">
-            <div class="image"><img src="img/logo.png"></div>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="image">
+                <img src="img/logo.png" alt="Bolden Logo">
+            </div>
             <h1>Dynamic Organization</h1>
-            <p class="sub-topic">Dynamic Organization is dedicated to empowering young minds by fostering skill development, providing personalized counseling, and creating opportunities for holistic growth. Our mission is to shape confident, capable, and future-ready individuals who can thrive in an ever-evolving world.</p>
-        </div>
-        <hr>
-        <div class="volunteers" id="volunteers">
-            <h1 class="vol-text">Volunteer Forms</h1>
-            <h2 class="sec-sub-topic">Empowering youngs for a Brighter Future</h2>
-            <h3 class="thi-sub-topic">Join us in making a difference !</h3>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfD-_4P7_5XBcH7RKXvmtaKP5BHp50xZZ92WJCOLITWO5WYWA/viewform"><button class="btn">Volunteer Form</button></a>
+            <p class="sub-topic">
+                Dynamic Organization is dedicated to empowering young minds by fostering skill development, providing personalized counseling, and creating opportunities for holistic growth. Our mission is to shape confident, capable, and future-ready individuals who can thrive in an ever-evolving world.
+            </p>
         </div>
     </section>
+
+    <section class="volunteers" id="volunteers">
+        <h1 class="vol-text">Volunteer Forms</h1>
+        <h2 class="sec-sub-topic">Empowering youth for a Brighter Future</h2>
+        <h3 class="thi-sub-topic">Join us in making a difference!</h3>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfD-_4P7_5XBcH7RKXvmtaKP5BHp50xZZ92WJCOLITWO5WYWA/viewform">
+            <button class="btn">Volunteer Form</button>
+        </a>
+    </section>
+    <section class="about" id="about">
+        <h1 class="vol-text">About Bolden</h1>
+        <br>
+        <div class="image"><img src="img/rs_600,h_800,cg_true.png" style="margin-right: 550px;"></div>
+        <h2 class="sec-sub-topic" style="display: flex; position: relative; left: 760px; bottom: 470px; font-size: 2.5rem;">About Our Mission</h2>
+        <p class="text"><span>Bolden is a dynamic organization dedicated to empowering young minds by fostering skill development, providing personalized counseling, and creating opportunities for holistic growth. Our mission is to shape confident, capable, and future-ready individuals who can thrive in an ever-evolving world.</span></p>
+    </section>
+
+    <section class="team" id="team">
+        <h1 class="vol-text">Our Team</h1>
+        <div class="slider-container">
+            <div class="slider">
+                <img src="img/rs=w_984,h_9.webp">
+                <img src="img/rs=w_984,h_984.webp">
+                <img src="img/rs=.webp">
+                <img src="img/rs=w_984.webp">
+            </div>
+        </div>
+        <div class="controls">
+            <button class="btn-left" onclick="prevSlide()">&lt;</button>
+            <button class="btn-right" onclick="nextSlide()">&gt;</button>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+    </section>
+    <section class="activites" id="activities" style="font-size: 1.5rem;">
+        <h1 class="vol-text" style="margin-left: 43%; font-weight: 2rem;">Activites</h1>
+        <h2 style="margin-left: 40%;">Daily Meetings</h2>
+        <div class="image"><img src="img/meet0812bud7.webp" style="margin-left: 100px;"></div>
+        <h2 class="sec-sub-topic" style="display: flex; position: relative; left: 700px; bottom: 470px; font-size: 2.5rem;">Empowering Lives with Bolden</h2>
+        <p class="text2"><span>Bolden initiatives for Skill pathsala helps poor children for skill development!!</span></p>
+        <a href="#">
+            <button class="btn2">Find out More</button>
+        </a>
+    </section>
+    <section class="contact" id="contact" style="font-size: 1.5rem;">
+        <h1 class="vol-text" style="margin-left: 43%; font-weight: 2rem;">Contact</h1>
+        <form action="" class="Contact-form">
+            <input type="email" name="Email" id="Email-contact" placeholder="Email">
+            <input type="submit" id="sumbit" value="Sumbit">
+        </form>
+    </section>
+    <footer>
+        <div class="text3" >
+            <span class="email"><i class="fa-solid fa-envelope"></i> boldenforyou@gmail.com</span>
+            <span>Created by
+                <a href="#">Bolden</a>
+                &#169; 2025 All Rights Reserved
+            </span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.links').classList.toggle('active');
+        }
+    </script>
+    <script>
+        AOS.init({offset:0});
+    </script>
 </body>
 </html>
