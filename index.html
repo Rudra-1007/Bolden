@@ -52,7 +52,7 @@
         </div>
     </nav>
 
-    <section class="hero" id="home">
+    <section class="hero" id="home" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
         <div class="container">
             <div class="image">
                 <img src="img/logo.png" alt="Bolden Logo">
@@ -64,7 +64,7 @@
         </div>
     </section>
 
-    <section class="volunteers" id="volunteers">
+    <section class="volunteers" id="volunteers" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
         <h1 class="vol-text">Volunteer Forms</h1>
         <h2 class="sec-sub-topic">Empowering youth for a Brighter Future</h2>
         <h3 class="thi-sub-topic">Join us in making a difference!</h3>
@@ -72,15 +72,14 @@
             <button class="btn">Volunteer Form</button>
         </a>
     </section>
-    <section class="about" id="about">
+    <section class="about" id="about" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
         <h1 class="vol-text">About Bolden</h1>
         <br>
         <div class="image"><img src="img/rs_600,h_800,cg_true.png" style="margin-right: 550px;"></div>
         <h2 class="sec-sub-topic" style="display: flex; position: relative; left: 760px; bottom: 470px; font-size: 2.5rem;">About Our Mission</h2>
         <p class="text"><span>Bolden is a dynamic organization dedicated to empowering young minds by fostering skill development, providing personalized counseling, and creating opportunities for holistic growth. Our mission is to shape confident, capable, and future-ready individuals who can thrive in an ever-evolving world.</span></p>
     </section>
-
-    <section class="team" id="team">
+    <section class="team" id="team" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
         <h1 class="vol-text">Our Team</h1>
         <div class="slider-container">
             <div class="slider">
@@ -94,11 +93,11 @@
             <button class="btn-left" onclick="prevSlide()">&lt;</button>
             <button class="btn-right" onclick="nextSlide()">&gt;</button>
         </div>
-        <div class="progress-bar">
+        <div class="progress-bar" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
             <div class="progress-fill"></div>
         </div>
     </section>
-    <section class="activites" id="activities" style="font-size: 1.5rem;">
+    <section class="activites" id="activities" style="font-size: 1.5rem;" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
         <h1 class="vol-text" style="margin-left: 43%; font-weight: 2rem;">Activites</h1>
         <h2 style="margin-left: 40%;">Daily Meetings</h2>
         <div class="image"><img src="img/meet0812bud7.webp" style="margin-left: 100px;"></div>
@@ -108,7 +107,7 @@
             <button class="btn2">Find out More</button>
         </a>
     </section>
-    <section class="contact" id="contact" style="font-size: 1.5rem;">
+    <section class="contact" id="contact" style="font-size: 1.5rem;" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
         <h1 class="vol-text" style="margin-left: 43%; font-weight: 2rem;">Contact</h1>
         <form action="" class="Contact-form">
             <input type="email" name="Email" id="Email-contact" placeholder="Email">
@@ -116,7 +115,7 @@
         </form>
     </section>
     <footer>
-        <div class="text3" >
+        <div class="text3">
             <span class="email"><i class="fa-solid fa-envelope"></i> boldenforyou@gmail.com</span>
             <span>Created by
                 <a href="#">Bolden</a>
@@ -131,6 +130,7 @@
             document.querySelector('.links').classList.toggle('active');
         }
     </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({offset:0});
     </script>
