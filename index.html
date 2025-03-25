@@ -27,6 +27,132 @@
             transform: scale(1.2);
         }
     </style>
+    <style>
+        .menu {
+            display: none;
+            flex-direction: column;
+            background: #333;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            width: 200px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .menu a {
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            border-bottom: 1px solid #444;
+            transition: background 0.3s ease;
+        }
+        .menu a:hover {
+            background: #555;
+        }
+        .hamburger {
+            cursor: pointer;
+            padding: 10px 15px;
+            background: #333;
+            color: white;
+            border: none;
+            font-size: 20px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            display: none;
+        }
+        .hamburger:hover {
+            background: #555;
+        }
+        .menu.show {
+            display: flex;
+        }
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block; 
+            }
+        }
+        @media (max-width: 768px) {
+    .social-links {
+        display: none; /* Hide social links on mobile */
+    }
+
+    .menu.show + .social-links {
+        display: flex; 
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+    </style>
+    <style>
+        .text-container {
+  display: flex;
+  justify-content: right;
+  align-items: end;
+  text-align: right;
+  margin-left: 650px;
+  margin-top: -400px;
+  margin-bottom: 150px;
+}
+
+.text {
+  max-width: 600px; 
+  font-size: 16px;
+}
+    </style>
+    <style>
+.footer {
+    width: 100%;
+    background: #FFB200;
+    color: white;
+    padding: 15px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.email {
+    text-align: left;
+    font-weight: 300;
+    flex: 1;
+}
+
+.footer-text {
+    flex: 2;
+    font-weight: 200;
+    text-decoration: none;
+    margin-right: 20%;
+    text-align: center;
+}
+
+.email i {
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .email {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+    </style>
 </head>
 <body>
     <nav>
@@ -47,8 +173,19 @@
                 <a href="" style="color: #fff;" class="soical"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="" style="color: #fff;" class="soical"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
-
-            <i class="fa-solid fa-bars hamburg" onclick="toggleMenu()" style="display: none;"></i>
+            
+            <button class="hamburger"><i class="fa-solid fa-bars"></i></button>
+            <div class="menu" id="menu">
+                <a href="#home">Home</a>
+                <a href="#voluteers">Voluteers</a>
+                <a href="#about">About</a>
+                <a href="#team">Team</a>
+                <a href="#activities">Activities</a>
+                <a href="#contact">Contact Us</a>
+                <a href="" style="color: #fff;" class="soical"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="" style="color: #fff;" class="soical"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+                <a href="" style="color: #fff;" class="soical"><i class="fa-brands fa-x-twitter"> Twitter</i></a>
+            </div>
         </div>
     </nav>
 
@@ -77,10 +214,12 @@
         <br>
         <div class="image"><img src="img/rs_600,h_800,cg_true.png" style="margin-right: 550px;"></div>
         <h2 class="sec-sub-topic" style="display: flex; position: relative; left: 760px; bottom: 470px; font-size: 2.5rem;">About Our Mission</h2>
-        <p class="text"><span>Bolden is a dynamic organization dedicated to empowering young minds by fostering skill development, providing personalized counseling, and creating opportunities for holistic growth. Our mission is to shape confident, capable, and future-ready individuals who can thrive in an ever-evolving world.</span></p>
+        <div class="text-container">
+            <p class="text"><span>Bolden is a dynamic organization dedicated to empowering young minds by fostering skill development, providing personalized counseling, and creating opportunities for holistic growth. Our mission is to shape confident, capable, and future-ready individuals who can thrive in an ever-evolving world.</span></p>
+        </div>
     </section>
-    <section class="team" id="team" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-        <h1 class="vol-text">Our Team</h1>
+    <section class="team" id="team" style="margin: 0 0 120px 0;" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+        <h1 class="vol-text" style="margin-left: 45%;">Our Team</h1>
         <div class="slider-container">
             <div class="slider">
                 <img src="img/rs=w_984,h_9.webp">
@@ -90,8 +229,8 @@
             </div>
         </div>
         <div class="controls">
-            <button class="btn-left" onclick="prevSlide()">&lt;</button>
-            <button class="btn-right" onclick="nextSlide()">&gt;</button>
+            <button class="btn-left" style="margin: 0 500px;" onclick="prevSlide()">&lt;</button>
+            <button class="btn-right" style="margin: 0 500px;" onclick="nextSlide()">&gt;</button>
         </div>
         <div class="progress-bar" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
             <div class="progress-fill"></div>
@@ -100,11 +239,11 @@
     <section class="activites" id="activities" style="font-size: 1.5rem;" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
         <h1 class="vol-text" style="margin-left: 43%; font-weight: 2rem;">Activites</h1>
         <h2 style="margin-left: 40%;">Daily Meetings</h2>
-        <div class="image"><img src="img/meet0812bud7.webp" style="margin-left: 100px;"></div>
-        <h2 class="sec-sub-topic" style="display: flex; position: relative; left: 700px; bottom: 470px; font-size: 2.5rem;">Empowering Lives with Bolden</h2>
-        <p class="text2"><span>Bolden initiatives for Skill pathsala helps poor children for skill development!!</span></p>
+        <div class="image-act"><img src="img/meet0812bud7.webp" style="margin-left: 150px; width: 50%; height: 50%;"></div>
+        <h2 class="sec-sub-topic" style="display: flex; position: relative; left: 850px; bottom: 470px; font-size: 2rem;">Empowering Lives with Bolden</h2>
+        <p class="text3" style="position: relative; left: 840px; bottom: 460px; font-size: 0.96rem;"><span>Bolden initiatives for Skill pathsala helps poor children for skill development!!</span></p>
         <a href="#">
-            <button class="btn2">Find out More</button>
+            <button class="btn2" style="position: relative; left: 850px; bottom: 470px;">Find out More</button>
         </a>
     </section>
     <section class="contact" id="contact" style="font-size: 1.5rem;" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
@@ -114,17 +253,19 @@
             <input type="submit" id="sumbit" value="Sumbit">
         </form>
     </section>
-    <footer>
-        <div class="text3">
-            <span class="email"><i class="fa-solid fa-envelope"></i> boldenforyou@gmail.com</span>
-            <span>Created by
-                <a href="#">Bolden</a>
-                &#169; 2025 All Rights Reserved
+    <footer class="footer">
+        <div class="footer-container">
+            <span class="email">
+                <i class="fa-solid fa-envelope"></i> boldenforyou@gmail.com
+            </span>
+            <span class="footer-text">
+               Created by <a href="#" style="text-decoration: none; color: white;">Bolden</a> &#169; 2025 All Rights Reserved
             </span>
         </div>
     </footer>
-
+    
     <script src="script.js"></script>
+    <script src="ham.js"></script>
     <script>
         function toggleMenu() {
             document.querySelector('.links').classList.toggle('active');
